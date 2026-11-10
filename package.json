@@ -1,0 +1,17 @@
+{
+  "name": "playwright-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SWE 437 - Playwright demo: simple React + Node.js task list",
+  "scripts": {
+    "setup": "npm install && npm install --prefix backend && npm install --prefix frontend && npx playwright install",
+    "backend": "npm start --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed --project=chromium",
+    "test:ui": "playwright test --ui",
+    "codegen": "playwright codegen http://localhost:5173",
+    "report": "playwright show-report"
+  },
+  "devDependencies": { "@playwright/test": "^1.49.1" }
+}
